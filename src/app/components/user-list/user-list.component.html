@@ -1,0 +1,43 @@
+
+
+
+<!--
+<ul>
+    <li *ngFor="let user allUsers">{{user.firstName}} {{user.lastName}}</li>
+
+</ul>
+-->
+
+<div *ngIf="allUsers.length <1"   class="alert alert-danger">
+    <h6>Please create a user on the Register Page</h6>
+
+</div>
+
+
+<div class="container">
+    <h2>List of users in the System</h2>
+<div *ngIf="allUsers.length >0" class="tabel table-stripped full-container">
+    <table class="table container">
+        <thead class="table-header ">
+            <Tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Extension</th>
+                <th scope="col">Email</th>
+            </Tr>
+        </thead>
+
+        <tbody>
+            <tr  *ngFor="let user of allUsers">
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.lastName }}</td>
+                <td>#{{ user.phoneNumber }}</td>
+                <td>{{ user.email }}</td>
+
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+There are : {{ allUsers.length}} users registered.
+</div>

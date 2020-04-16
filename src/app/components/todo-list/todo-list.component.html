@@ -1,0 +1,30 @@
+<p>todo-list works!</p>
+
+
+
+
+<div *ngIf="allUsers.length >0" class="tabel table-bordered  table-stripped">
+    <table class="table container">
+        <thead>
+            <Tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Email</th>
+                <th scope="col">Delete User</th>
+            </Tr>
+        </thead>
+
+        <tbody>
+            <tr  *ngFor="let user of allUsers">
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.lastName }}</td>
+                <td>{{ user.phoneNumber }}</td>
+                <td>{{ user.email }}</td>
+
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>
